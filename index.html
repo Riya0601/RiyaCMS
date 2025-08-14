@@ -2,29 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Beautiful Moon Image with Border</title>
+  <title>Moon Image with White or Grey Background</title>
   <style>
-    .moon {
+    body {
+      /* Change the background here: use #fff for white, #eee or #ccc for grey */
+      background-color: #fff;  /* For white */
+      /* background-color: #eee;  For light grey, uncomment if desired */
+      text-align: center;
+      padding-top: 40px;
+    }
+    .moon-pic {
       width: 300px;
       height: 300px;
       border-radius: 50%;
       background-image: url('https://www.solarsystemscope.com/textures/download/2k_moon.jpg');
       background-size: cover;
       background-position: center;
-      /* Stylish border */
-      border: 10px solid #e1e8ff;
-      box-shadow: 0 0 30px #678fff, 0 0 50px #dbedff inset;
-      display: block;
-      margin: 30px auto;
-    }
-    body {
-      background: #10173c;
-      text-align: center;
-      padding-top: 40px;
+      border: 8px solid #dedede;
+      box-shadow: 0 0 30px #bbb;
+      display: inline-block;
+      margin: 20px;
     }
   </style>
 </head>
 <body>
-  <div class="moon"></div>
+  <div class="moon-pic"></div>
+  <p style="color:#444">Change <code>background-color</code> in &lt;body&gt; style above for white or grey backgrounds.</p>
 </body>
 </html>
