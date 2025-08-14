@@ -1,30 +1,75 @@
 <style>
-    .space-section {
-        background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
-        padding: 20px;
-        border-radius: 10px;
-        color: white;
-        font-family: Arial, sans-serif;
-        box-shadow: 0 0 15px rgba(255, 255, 255, 0.2);
-    }
+  /* Container styles */
+  .moon-section {
+    background: #0d1b2a; /* dark blue background */
+    padding: 30px;
+    border-radius: 15px;
+    color: white;
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
 
-    .space-title {
-        text-align: center;
-        font-size: 2em;
-        margin-bottom: 15px;
-        color: #ffcc00;
-    }
+  /* Title styles */
+  .moon-title {
+    color: #ffcc00;
+    text-align: center;
+    font-size: 2.2em;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-shadow: 0 0 12px #ffcc00;
+  }
 
-    .space-text {
-        line-height: 1.6;
-        text-align: center;
-    }
+  /* Paragraph styles */
+  .moon-section p {
+    line-height: 1.6;
+    font-size: 1.1em;
+    text-align: center;
+    max-width: 750px;
+    margin: auto;
+  }
+
+  /* Image styles */
+  .moon-image {
+    display: block;
+    margin: 20px auto;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* Button styles */
+  .moon-btn {
+    display: block;
+    background: #ffcc00;
+    color: #0d1b2a;
+    padding: 12px 20px;
+    border-radius: 8px;
+    text-decoration: none;
+    text-align: center;
+    font-weight: bold;
+    width: fit-content;
+    margin: 20px auto 0;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    transition: background 0.3s ease;
+  }
+
+  .moon-btn:hover {
+    background: #ffd633;
+  }
 </style>
 
-<div class="space-section">
-    <h2 class="space-title">🚀 Moon Mission Control</h2>
-    <p class="space-text">
-        Welcome to the Moon Mission Control Center! Here, you can track our journey,
-        explore lunar facts, and stay updated on the latest cosmic adventures.
-    </p>
+<div class="moon-section">
+  <h2 class="moon-title">🌕 Moon Mission Control</h2>
+  
+  <p>Join us in exploring the Moon — a journey of discovery, innovation, and adventure.  
+  Our mission is to uncover the mysteries of our closest celestial neighbor, from its craters to its history.</p>
+  
+  <img class="moon-image" 
+       src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" 
+       alt="Moon Image">
+  
+  <a href="#" class="moon-btn">🚀 Join the Mission</a>
 </div>
