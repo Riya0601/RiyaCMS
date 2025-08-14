@@ -2,34 +2,82 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Moon Image with White Background</title>
+  <title>Space Moon and Stars Universe</title>
   <style>
     body {
-      background-color: #fff; /* White background */
-      text-align: center;
-      padding-top: 40px;
       margin: 0;
-      font-family: Arial, sans-serif;
+      height: 100vh;
+      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      overflow: hidden;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
     }
-    .moon-pic {
-      width: 300px;
-      height: 300px;
+
+    /* Moon styling */
+    .moon {
+      width: 200px;
+      height: 200px;
       border-radius: 50%;
       background-image: url('https://www.solarsystemscope.com/textures/download/2k_moon.jpg');
       background-size: cover;
       background-position: center;
-      border: 8px solid #dedede;
-      box-shadow: 0 0 30px #bbb;
-      display: inline-block;
-      margin: 20px auto;
+      box-shadow:
+        0 0 20px 5px rgba(255, 255, 255, 0.8),
+        0 0 30px 10px rgba(150, 150, 255, 0.6);
+      margin-bottom: 40px;
     }
-    p {
-      color: #444;
+
+    /* Stars container */
+    .stars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      pointer-events: none;
+      overflow: hidden;
+      z-index: 0;
+    }
+
+    /* Single star style */
+    .star {
+      position: absolute;
+      background: white;
+      border-radius: 50%;
+      opacity: 0.8;
+      animation: twinkle 3s infinite alternate;
+    }
+
+    /* Twinkle animation for stars */
+    @keyframes twinkle {
+      0% { opacity: 0.3; }
+      100% { opacity: 1; }
     }
   </style>
 </head>
 <body>
-  <div class="moon-pic"></div>
-  <p>Moon image shown with a clean white background.</p>
+  <div class="moon"></div>
+
+  <div class="stars" aria-hidden="true"></div>
+
+  <script>
+    // Generate random stars dynamically
+    const starsContainer = document.querySelector('.stars');
+    const starCount = 100;
+
+    for (let i = 0; i < starCount; i++) {
+      const star = document.createElement('div');
+      star.classList.add('star');
+      const size = Math.random() * 2 + 1; // star size between 1-3px
+      star.style.width = size + 'px';
+      star.style.height = size + 'px';
+      star.style.top = Math.random() * 100 + '%';
+      star.style.left = Math.random() * 100 + '%';
+      star.style.animationDuration = (2 + Math.random() * 3) + 's';
+      starsContainer.appendChild(star);
+    }
+  </script>
 </body>
 </html>
