@@ -1,24 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Moon Image in Space</title>
+  <meta charset="UTF-8" />
+  <title>Moon Image with White Background</title>
   <style>
     body {
-      background: #000; /* Space (black background) */
+      background-color: #fff; /* White background */
       text-align: center;
-      margin-top: 100px;
+      padding-top: 40px;
+      margin: 0;
+      font-family: Arial, sans-serif;
     }
-    img {
-      width: 220px;
-      height: 220px;
-      object-fit: cover;
+    .moon-pic {
+      width: 300px;
+      height: 300px;
       border-radius: 50%;
-      box-shadow: 0 0 60px #fff; /* Glow to simulate moonlight */
+      background-image: url('https://www.solarsystemscope.com/textures/download/2k_moon.jpg');
+      background-size: cover;
+      background-position: center;
+      border: 8px solid #dedede;
+      box-shadow: 0 0 30px #bbb;
+      display: inline-block;
+      margin: 20px auto;
+    }
+    p {
+      color: #444;
     }
   </style>
 </head>
 <body>
-  <img src="https://images.unsplash.com/photo-1465101162946-4377e57745c3?auto=format&fit=crop&w=800&q=80" alt="Moon in space">
+  <div class="moon-pic"></div>
+  <p>Moon image shown with a clean white background.</p>
 </body>
 </html>
