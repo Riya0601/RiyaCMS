@@ -1,83 +1,96 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <title>Space Moon and Stars Universe</title>
-  <style>
-    body {
-      margin: 0;
-      height: 100vh;
-      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
-      overflow: hidden;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-    }
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riya’s CMS Connect Demo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(120deg, #f0f4f8, #e6f0ff);
+            color: #333;
+        }
 
-    /* Moon styling */
-    .moon {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      background-image: url('https://www.solarsystemscope.com/textures/download/2k_moon.jpg');
-      background-size: cover;
-      background-position: center;
-      box-shadow:
-        0 0 20px 5px rgba(255, 255, 255, 0.8),
-        0 0 30px 10px rgba(150, 150, 255, 0.6);
-      margin-bottom: 40px;
-    }
+        header {
+            background-color: #4a90e2;
+            padding: 20px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+        }
 
-    /* Stars container */
-    .stars {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      top: 0;
-      left: 0;
-      pointer-events: none;
-      overflow: hidden;
-      z-index: 0;
-    }
+        header h1 {
+            margin: 0;
+            font-size: 2rem;
+        }
 
-    /* Single star style */
-    .star {
-      position: absolute;
-      background: white;
-      border-radius: 50%;
-      opacity: 0.8;
-      animation: twinkle 3s infinite alternate;
-    }
+        main {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            border-radius: 10px;
+            padding: 20px 30px;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+        }
 
-    /* Twinkle animation for stars */
-    @keyframes twinkle {
-      0% { opacity: 0.3; }
-      100% { opacity: 1; }
-    }
-  </style>
+        h2 {
+            color: #4a90e2;
+        }
+
+        p {
+            line-height: 1.6;
+        }
+
+        .highlight {
+            background: #e6f0ff;
+            padding: 10px;
+            border-left: 4px solid #4a90e2;
+            margin: 20px 0;
+            font-style: italic;
+        }
+
+        footer {
+            text-align: center;
+            padding: 15px;
+            font-size: 0.9rem;
+            background-color: #f8f8f8;
+            color: #666;
+            border-top: 1px solid #ddd;
+        }
+    </style>
 </head>
 <body>
-  <div class="moon"></div>
+    <header>
+        <h1>Welcome to Riya’s CMS Connect Demo</h1>
+    </header>
 
-  <div class="stars" aria-hidden="true"></div>
+    <main>
+        <h2>About This Page</h2>
+        <p>
+            This HTML page is hosted on GitHub Pages and integrated into Salesforce Experience Cloud using 
+            <strong>CMS Connect (HTML)</strong>.
+        </p>
 
-  <script>
-    // Generate random stars dynamically
-    const starsContainer = document.querySelector('.stars');
-    const starCount = 100;
+        <div class="highlight">
+            “Static content, beautiful design, and Salesforce integration — all in one.”
+        </div>
 
-    for (let i = 0; i < starCount; i++) {
-      const star = document.createElement('div');
-      star.classList.add('star');
-      const size = Math.random() * 2 + 1; // star size between 1-3px
-      star.style.width = size + 'px';
-      star.style.height = size + 'px';
-      star.style.top = Math.random() * 100 + '%';
-      star.style.left = Math.random() * 100 + '%';
-      star.style.animationDuration = (2 + Math.random() * 3) + 's';
-      starsContainer.appendChild(star);
-    }
-  </script>
+        <h2>Why This Works</h2>
+        <ul>
+            <li>100% static HTML, CSS, and JavaScript</li>
+            <li>Accessible via HTTPS without authentication</li>
+            <li>Compatible with Salesforce CMS Connect</li>
+        </ul>
+
+        <p>
+            You can edit this file to include your own text, images, or styles, and the changes will instantly appear in your Salesforce site.
+        </p>
+    </main>
+
+    <footer>
+        © 2025 Riya’s CMS Demo. Powered by GitHub Pages & Salesforce.
+    </footer>
 </body>
 </html>
