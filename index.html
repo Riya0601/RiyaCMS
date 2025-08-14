@@ -3,94 +3,108 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Riya’s CMS Connect Demo</title>
+    <title>Moon Mission - CMS Connect Demo</title>
     <style>
         body {
             font-family: 'Segoe UI', Arial, sans-serif;
             margin: 0;
             padding: 0;
-            background: linear-gradient(120deg, #f0f4f8, #e6f0ff);
-            color: #333;
+            background: radial-gradient(ellipse at bottom, #0d1b2a 0%, #000000 100%);
+            color: #f0f0f0;
         }
 
         header {
-            background-color: #4a90e2;
-            padding: 20px;
             text-align: center;
-            color: white;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+            padding: 40px 20px;
+            background: transparent;
         }
 
         header h1 {
+            font-size: 2.5rem;
+            color: #ffe066;
+            text-shadow: 0 0 15px rgba(255, 224, 102, 0.8);
             margin: 0;
-            font-size: 2rem;
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #a9d6e5;
         }
 
         main {
             max-width: 900px;
             margin: 30px auto;
-            background: white;
+            background: rgba(255, 255, 255, 0.05);
             border-radius: 10px;
             padding: 20px 30px;
-            box-shadow: 0 4px 10px rgba(0,0,0,0.08);
+            box-shadow: 0 4px 20px rgba(0,0,0,0.4);
         }
 
         h2 {
-            color: #4a90e2;
+            color: #ffe066;
         }
 
         p {
             line-height: 1.6;
+            color: #d9d9d9;
         }
 
         .highlight {
-            background: #e6f0ff;
+            background: rgba(255, 224, 102, 0.1);
             padding: 10px;
-            border-left: 4px solid #4a90e2;
+            border-left: 4px solid #ffe066;
             margin: 20px 0;
             font-style: italic;
+            color: #ffe066;
+        }
+
+        .moon-image {
+            width: 100%;
+            border-radius: 10px;
+            margin-top: 20px;
+            box-shadow: 0 0 20px rgba(255, 224, 102, 0.5);
         }
 
         footer {
             text-align: center;
             padding: 15px;
             font-size: 0.9rem;
-            background-color: #f8f8f8;
-            color: #666;
-            border-top: 1px solid #ddd;
+            background-color: rgba(255,255,255,0.05);
+            color: #a9d6e5;
+            border-top: 1px solid rgba(255,255,255,0.1);
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>Welcome to Riya’s CMS Connect Demo</h1>
+        <h1>Moon Mission Control</h1>
+        <p>Exploring beyond boundaries</p>
     </header>
 
     <main>
-        <h2>About This Page</h2>
+        <h2>Mission Overview</h2>
         <p>
-            This HTML page is hosted on GitHub Pages and integrated into Salesforce Experience Cloud using 
-            <strong>CMS Connect (HTML)</strong>.
+            We are on a journey to explore the Moon for scientific discovery, technology advancement, 
+            and to pave the way for humanity’s next giant leap: Mars. 
+            This mission unites engineers, scientists, and dreamers worldwide.
         </p>
 
         <div class="highlight">
-            “Static content, beautiful design, and Salesforce integration — all in one.”
+            “To the Moon and beyond — one small step at a time.”
         </div>
 
-        <h2>Why This Works</h2>
-        <ul>
-            <li>100% static HTML, CSS, and JavaScript</li>
-            <li>Accessible via HTTPS without authentication</li>
-            <li>Compatible with Salesforce CMS Connect</li>
-        </ul>
+        <img class="moon-image" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" alt="Moon Image">
 
-        <p>
-            You can edit this file to include your own text, images, or styles, and the changes will instantly appear in your Salesforce site.
-        </p>
+        <h2>Key Objectives</h2>
+        <ul>
+            <li>Establish a sustainable human presence on the Moon</li>
+            <li>Test new space technologies</li>
+            <li>Collaborate with international space agencies</li>
+        </ul>
     </main>
 
     <footer>
-        © 2025 Riya’s CMS Demo. Powered by GitHub Pages & Salesforce.
+        © 2025 Moon Mission Demo | Powered by Salesforce CMS Connect
     </footer>
 </body>
 </html>
