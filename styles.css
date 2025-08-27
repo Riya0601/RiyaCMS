@@ -1,11 +1,11 @@
-.cms-image {
-  max-width: 350px;
-  border-radius: 10px;
+/* Apply filter to the entire SVG */
+.sky svg {
+  max-width: 240px;
   transition: all 0.3s ease;
-  filter: grayscale(100%);   /* Change to sepia, brightness, hue-rotate, etc. */
+  filter: grayscale(100%);
 }
 
-/* optional: only change color on hover */
-.cms-image:hover {
-  filter: sepia(80%);
+/* Optional: change color on hover */
+.sky svg:hover {
+  filter: hue-rotate(180deg) saturate(2);
 }
