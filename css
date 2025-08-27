@@ -1,0 +1,11 @@
+.cms-image {
+  max-width: 350px;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  filter: grayscale(100%);   /* Change to sepia, brightness, hue-rotate, etc. */
+}
+
+/* optional: only change color on hover */
+.cms-image:hover {
+  filter: sepia(80%);
+}
