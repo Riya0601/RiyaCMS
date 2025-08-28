@@ -1,21 +1,21 @@
-/* Default (dark) */
+/* Default dark */
 .moon-section {
   background: #0d1b2a;
   color: #fff;
+  min-height: 100vh; /* full screen height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   transition: all 0.4s ease;
-}
-
-.toggle-btn {
-  margin: 10px 0;
-  padding: 6px 12px;
-  background: #ffd84d;
-  border-radius: 6px;
-  border: none;
   cursor: pointer;
-  font-weight: bold;
 }
 
-/* Light Mode when button is clicked */
+.moon-content {
+  max-width: 600px;
+}
+
+/* Light Mode */
 .moon-section.light-mode {
   background: #ffffff;
   color: #000;
