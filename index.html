@@ -1,32 +1,29 @@
-<!-- Toggle Button -->
-<button id="toggle-btn" class="toggle-btn">Toggle Mode</button>
+<div class="moon-section" id="moon-section">
+  <div class="moon-content">
+    <h2 class="moon-title">🌕 Moon Mission Control</h2>
+    <p class="moon-sub">Exploring beyond boundaries</p>
 
-<div class="moon-section">
-  <h2 class="moon-title">🌕 Moon Mission Control</h2>
-  <p class="moon-sub">Exploring beyond boundaries</p>
+    <div class="badge">“To the Moon and beyond — one small step at a time.”</div>
 
-  <div class="badge">“To the Moon and beyond — one small step at a time.”</div>
+    <div class="sky">
+      <svg width="240" height="240" viewBox="0 0 320 320">
+        <circle cx="160" cy="160" r="150" fill="#cfd6db"/>
+        <g fill="#9fa8ad" opacity=".55">
+          <circle cx="110" cy="120" r="18"/>
+          <circle cx="190" cy="90" r="12"/>
+          <circle cx="220" cy="150" r="24"/>
+        </g>
+      </svg>
+    </div>
 
-  <div class="sky">
-    <!-- your moon SVG here -->
-    <svg width="240" height="240" viewBox="0 0 320 320">
-      <circle cx="160" cy="160" r="150" fill="#cfd6db"/>
-      <g fill="#9fa8ad" opacity=".55">
-        <circle cx="110" cy="120" r="18"/>
-        <circle cx="190" cy="90" r="12"/>
-        <circle cx="220" cy="150" r="24"/>
-      </g>
-    </svg>
+    <p class="copy">
+      Join us in exploring the Moon — a journey of discovery, innovation, and adventure.
+    </p>
   </div>
-
-  <p class="copy">
-    Join us in exploring the Moon — a journey of discovery, innovation, and adventure.
-  </p>
 </div>
 
 <script>
-  // toggle class on moon-section
-  document.getElementById("toggle-btn").addEventListener("click", function() {
-    document.querySelector(".moon-section").classList.toggle("light-mode");
+  document.getElementById("moon-section").addEventListener("click", function() {
+    this.classList.toggle("light-mode");
   });
 </script>
