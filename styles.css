@@ -1,34 +1,26 @@
-/* Default styles */
+/* Default (dark) */
 .moon-section {
   background: #0d1b2a;
   color: #fff;
   transition: all 0.4s ease;
 }
 
-/* Style the toggle button */
 .toggle-btn {
-  display: inline-block;
-  margin: 20px auto;
-  padding: 8px 16px;
+  margin: 10px 0;
+  padding: 6px 12px;
   background: #ffd84d;
-  border-radius: 8px;
+  border-radius: 6px;
+  border: none;
   cursor: pointer;
   font-weight: bold;
 }
 
-/* Default SVG filter (grayscale) */
-.sky svg {
-  max-width: 240px;
-  transition: all 0.3s ease;
-  filter: grayscale(100%);
-}
-
-/* When checkbox is checked → change background + moon filter */
-#toggle-mode:checked ~ .moon-section {
+/* Light Mode when button is clicked */
+.moon-section.light-mode {
   background: #ffffff;
   color: #000;
 }
 
-#toggle-mode:checked ~ .moon-section .sky svg {
-  filter: hue-rotate(180deg) saturate(2);
+.moon-section.light-mode .sky svg {
+  filter: hue-rotate(180deg) saturate(1.5);
 }
