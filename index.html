@@ -1,12 +1,9 @@
 <div class="moon-section" id="moon-section">
   <div class="moon-content">
-    <h2 class="moon-title">🌕 Moon Mission Control</h2>
-    <p class="moon-sub">Exploring beyond boundaries</p>
-
-    <div class="badge">“To the Moon and beyond — one small step at a time.”</div>
-
+    <h2>Exploring beyond boundaries</h2>
+    <p>“To the Moon and beyond — one small step at a time.”</p>
     <div class="sky">
-      <svg width="240" height="240" viewBox="0 0 320 320">
+      <svg width="200" height="200" viewBox="0 0 320 320">
         <circle cx="160" cy="160" r="150" fill="#cfd6db"/>
         <g fill="#9fa8ad" opacity=".55">
           <circle cx="110" cy="120" r="18"/>
@@ -15,15 +12,44 @@
         </g>
       </svg>
     </div>
-
-    <p class="copy">
-      Join us in exploring the Moon — a journey of discovery, innovation, and adventure.
-    </p>
+    <p>Join us in exploring the Moon — a journey of discovery, innovation, and adventure.</p>
   </div>
 </div>
 
 <script>
-  document.getElementById("moon-section").addEventListener("click", function() {
-    this.classList.toggle("light-mode");
+  // Attach after DOM is loaded
+  document.addEventListener("DOMContentLoaded", function () {
+    const section = document.getElementById("moon-section");
+    section.addEventListener("click", function () {
+      section.classList.toggle("light-mode");
+    });
   });
 </script>
+
+<style>
+  .moon-section {
+    background: #0d1b2a;
+    color: #fff;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.4s ease;
+    cursor: pointer;
+  }
+
+  .moon-content {
+    max-width: 600px;
+  }
+
+  /* Light Mode */
+  .moon-section.light-mode {
+    background: #ffffff;
+    color: #000;
+  }
+
+  .moon-section.light-mode .sky svg {
+    filter: invert(1) hue-rotate(180deg);
+  }
+</style>
