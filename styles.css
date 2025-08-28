@@ -1,11 +1,34 @@
-/* Apply filter to the entire SVG */
+/* Default styles */
+.moon-section {
+  background: #0d1b2a;
+  color: #fff;
+  transition: all 0.4s ease;
+}
+
+/* Style the toggle button */
+.toggle-btn {
+  display: inline-block;
+  margin: 20px auto;
+  padding: 8px 16px;
+  background: #ffd84d;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+/* Default SVG filter (grayscale) */
 .sky svg {
   max-width: 240px;
   transition: all 0.3s ease;
   filter: grayscale(100%);
 }
 
-/* Optional: change color on hover */
-.sky svg:hover {
+/* When checkbox is checked → change background + moon filter */
+#toggle-mode:checked ~ .moon-section {
+  background: #ffffff;
+  color: #000;
+}
+
+#toggle-mode:checked ~ .moon-section .sky svg {
   filter: hue-rotate(180deg) saturate(2);
 }
