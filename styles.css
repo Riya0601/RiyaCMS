@@ -1,8 +1,7 @@
-/* Default dark */
 .moon-section {
-  background: #0d1b2a;
-  color: #fff;
-  min-height: 100vh; /* full screen height */
+  background: #0d1b2a;       /* Dark background */
+  color: #fff;               /* White text */
+  min-height: 100vh;         /* Full screen height */
   display: flex;
   justify-content: center;
   align-items: center;
@@ -15,12 +14,13 @@
   max-width: 600px;
 }
 
-/* Light Mode */
-.moon-section.light-mode {
-  background: #ffffff;
-  color: #000;
+/* When checkbox is checked → switch to light mode */
+#modeToggle:checked + .moon-section {
+  background: #ffffff;   /* White background */
+  color: #000;           /* Black text */
 }
 
-.moon-section.light-mode .sky svg {
-  filter: hue-rotate(180deg) saturate(1.5);
+/* Invert moon colors when light mode is active */
+#modeToggle:checked + .moon-section .sky svg {
+  filter: invert(1) hue-rotate(180deg);
 }
