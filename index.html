@@ -1,55 +1,23 @@
-<div class="moon-section" id="moon-section">
-  <div class="moon-content">
-    <h2>Exploring beyond boundaries</h2>
-    <p>“To the Moon and beyond — one small step at a time.”</p>
-    <div class="sky">
-      <svg width="200" height="200" viewBox="0 0 320 320">
-        <circle cx="160" cy="160" r="150" fill="#cfd6db"/>
-        <g fill="#9fa8ad" opacity=".55">
-          <circle cx="110" cy="120" r="18"/>
-          <circle cx="190" cy="90" r="12"/>
-          <circle cx="220" cy="150" r="24"/>
-        </g>
-      </svg>
+<div class="moon-wrapper">
+  <!-- Hidden checkbox acts as toggle -->
+  <input type="checkbox" id="modeToggle" hidden>
+  
+  <!-- Label acts as the clickable area -->
+  <label for="modeToggle" class="moon-section">
+    <div class="moon-content">
+      <h2>Exploring beyond boundaries</h2>
+      <p>“To the Moon and beyond — one small step at a time.”</p>
+      <div class="sky">
+        <svg width="200" height="200" viewBox="0 0 320 320">
+          <circle cx="160" cy="160" r="150" fill="#cfd6db"/>
+          <g fill="#9fa8ad" opacity=".55">
+            <circle cx="110" cy="120" r="18"/>
+            <circle cx="190" cy="90" r="12"/>
+            <circle cx="220" cy="150" r="24"/>
+          </g>
+        </svg>
+      </div>
+      <p>Join us in exploring the Moon — a journey of discovery, innovation, and adventure.</p>
     </div>
-    <p>Join us in exploring the Moon — a journey of discovery, innovation, and adventure.</p>
-  </div>
+  </label>
 </div>
-
-<script>
-  // Attach after DOM is loaded
-  document.addEventListener("DOMContentLoaded", function () {
-    const section = document.getElementById("moon-section");
-    section.addEventListener("click", function () {
-      section.classList.toggle("light-mode");
-    });
-  });
-</script>
-
-<style>
-  .moon-section {
-    background: #0d1b2a;
-    color: #fff;
-    min-height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    transition: all 0.4s ease;
-    cursor: pointer;
-  }
-
-  .moon-content {
-    max-width: 600px;
-  }
-
-  /* Light Mode */
-  .moon-section.light-mode {
-    background: #ffffff;
-    color: #000;
-  }
-
-  .moon-section.light-mode .sky svg {
-    filter: invert(1) hue-rotate(180deg);
-  }
-</style>
