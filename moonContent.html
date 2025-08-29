@@ -2,33 +2,40 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Moon Example</title>
-
-  <!-- Link to CMS-hosted CSS (replace with your content key path) -->
-  <link rel="stylesheet" href="/sfsites/c/cms/delivery/media/MCYMFJ4GMSJZGEVL4EUGCZ4DAOWI">
-
+  <title>Moon CMS Example</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <img id="moonImage" 
-         src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" 
-         alt="Moon">
-    <div class="content">
+  <div class="cms-moon-container">
+    <!-- hidden checkbox to control toggle -->
+    <input type="checkbox" id="toggle" hidden>
+    
+    <!-- clicking on images triggers checkbox -->
+    <label for="toggle" class="cms-moon-image-wrapper">
+      <img class="moon" 
+           src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" 
+           alt="Moon">
+      <img class="moon alternate" 
+           src="https://upload.wikimedia.org/wikipedia/commons/9/99/Moon_in_black_sky.jpg" 
+           alt="Moon alternate">
+    </label>
+
+    <!-- right side text -->
+    <div class="cms-moon-content">
       <h2>The Moon</h2>
-      <p>The Moon is Earth's only natural satellite.</p>
-      <p>It is about one-quarter the size of Earth.</p>
-      <p>It influences ocean tides.</p>
-      <p>The Moon has phases like new moon and full moon.</p>
-      <p>It has been visited by astronauts.</p>
-      <p>It has craters from impacts.</p>
-      <p>The Moon reflects sunlight.</p>
-      <p>It takes 27.3 days to orbit Earth.</p>
-      <p>It has no atmosphere like Earth.</p>
-      <p>It is slowly moving away from Earth.</p>
+      <p>
+        The Moon is Earth's only natural satellite and is the fifth largest moon in the Solar System.  
+        Its gravitational pull affects tides on Earth.  
+        The Moon’s surface is covered with craters, mountains, and ancient lava plains.  
+        It has no atmosphere, no water, and no weather like Earth.  
+        Humans first visited the Moon in 1969 with Apollo 11.  
+        The Moon always shows the same face to Earth.  
+        Its phases are caused by the changing positions of the Earth, Moon, and Sun.  
+        A lunar day lasts about 29.5 Earth days.  
+        Scientists are planning new missions to explore it again.  
+        The Moon inspires art, culture, and science all around the world.
+      </p>
     </div>
   </div>
-
-  <!-- Important: load JS at the end of body -->
-  <script src="script.js"></script>
 </body>
 </html>
