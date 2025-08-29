@@ -1,25 +1,63 @@
-.moon-container {
-  display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  margin: 20px;
-}
-
-.moon-image {
-  max-width: 300px;
-  height: auto;
+/* Section styling */
+.image-section {
+  display: grid;
+  place-items: center;
+  background: #0d1b2a;
+  color: #fff;
+  min-height: 60vh;
+  padding: 32px;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(255,255,255,.12);
   cursor: pointer;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  transition: background .35s ease, color .35s ease;
 }
 
-.moon-content {
-  flex: 1;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+/* hidden checkbox */
+.image-section .toggle-input {
+  position: absolute;
+  inset: 0;
+  width: 0;
+  height: 0;
+  opacity: 0;
+  pointer-events: none;
 }
 
-.moon-content h2 {
-  margin-top: 0;
-  color: #444;
+.image-content { max-width: 600px; }
+
+.image-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0 0 10px;
+  color: #ffd84d;
+}
+.image-sub { margin: 0 0 20px; color: #9bd4ff; }
+
+/* image box */
+.image-box {
+  position: relative;
+  width: 260px;
+  height: 260px;
+  margin: auto;
+}
+.moon-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 12px;
+  transition: opacity .4s ease;
+}
+
+/* default: dark moon visible */
+.moon-dark { opacity: 1; }
+.moon-light { opacity: 0; }
+
+/* when checkbox is checked, swap images */
+.image-section:has(> .toggle-input:checked) .moon-dark {
+  opacity: 0;
+}
+.image-section:has(> .toggle-input:checked) .moon-light {
+  opacity: 1;
 }
