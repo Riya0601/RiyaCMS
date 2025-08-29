@@ -1,72 +1,20 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8" />
-<title>Moon swap — checkbox</title>
-<style>
-  /* Scoped styles to avoid touching other page components */
-  .riya-moon-root { display:flex; gap:20px; align-items:flex-start; font-family:Arial, sans-serif; }
-  /* hide the control */
-  .riya-toggle { display:none; }
+<div class="image-wrapper">
+  <!-- Clickable section -->
+  <label class="image-section">
+    <!-- Hidden checkbox toggle -->
+    <input type="checkbox" class="toggle-input" aria-label="Toggle image">
 
-  .riya-image-box {
-    position:relative;
-    width:320px;    /* fixed box so layout never shifts */
-    height:240px;
-    flex-shrink:0;
-  }
-  .riya-image-box img {
-    position:absolute;
-    inset:0;
-    width:100%;
-    height:100%;
-    object-fit:cover;
-    border-radius:10px;
-    box-shadow:0 6px 16px rgba(0,0,0,0.15);
-    transition:opacity .35s ease;
-    display:block;
-  }
-  .riya-image-box img.riya-second { opacity:0; pointer-events:none; }
+    <div class="image-content">
+      <h2 class="image-title">🌕 Moon Image Toggle</h2>
+      <p class="image-sub">Click anywhere to swap image</p>
 
-  /* when checkbox is checked, swap opacities */
-  #riya-toggle:checked ~ .riya-moon .riya-image-box img.riya-first { opacity:0; }
-  #riya-toggle:checked ~ .riya-moon .riya-image-box img.riya-second { opacity:1; }
-
-  /* label covers the image so clicking toggles checkbox */
-  .riya-image-label { display:block; width:100%; height:100%; cursor:pointer; }
-
-  .riya-content { max-width:700px; line-height:1.6; color:#222; }
-  .riya-content h2 { margin-top:0; }
-</style>
-</head>
-<body>
-
-<!-- hidden checkbox must come BEFORE the wrapper so sibling selector works -->
-<input id="riya-toggle" class="riya-toggle" type="checkbox" />
-
-<div class="riya-moon">
-  <div class="riya-moon-root">
-    <label for="riya-toggle" class="riya-image-box riya-image-label">
-      <!-- first image (visible initially) -->
-      <img class="riya-first" 
-           src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp"
-           alt="Moon 1">
-      <!-- second image (hidden initially) -->
-      <img class="riya-second" 
-           src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg"
-           alt="Moon 2">
-    </label>
-
-    <div class="riya-content">
-      <h2>The Moon</h2>
-      <p>The Moon is Earth's only natural satellite and has inspired humanity for centuries. It controls the tides and lights our night skies.</p>
-      <p>Its surface is pockmarked with craters and vast basalt plains called maria, formed by ancient lava flows.</p>
-      <p>Humans first visited the Moon in 1969 with Apollo 11; we continue to plan future missions and bases.</p>
-      <p>The Moon's phases and eclipses have guided calendars, navigation, and culture across the world.</p>
-      <p>Click the image on the left to toggle another view of the Moon.</p>
+      <!-- Two stacked images -->
+      <div class="image-box">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" 
+             alt="Moon - Dark" class="moon-img moon-dark">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/FullMoon2010_faded.jpg" 
+             alt="Moon - Light" class="moon-img moon-light">
+      </div>
     </div>
-  </div>
+  </label>
 </div>
-
-</body>
-</html>
