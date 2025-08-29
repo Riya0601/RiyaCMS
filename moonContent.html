@@ -2,33 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moon Info</title>
+  <title>Moon Demo</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <div class="container">
+    <!-- Image section -->
     <div class="image-box">
-      <img 
-        id="moonImage"
-        src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp" 
-        alt="Moon">
+      <img id="moonImage" 
+           src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCKTHY2HLDVJBDFFF3Y3M2RFEPEM?version=1.1&fileHash=f2c6f3fc13f47bf7184be329c4c9942a&fileName=12d41a4d-0d72-43dc-870d-1ea8d07eadf0.png" 
+           alt="Moon">
     </div>
+
+    <!-- Content section -->
     <div class="content-box">
-      <h2>The Beautiful Moon</h2>
-      <p>The Moon is Earth’s only natural satellite and the fifth largest in the solar system.</p>
-      <p>It is about 1/4th the size of Earth and has a diameter of 3,474 km.</p>
-      <p>The Moon plays a crucial role in stabilizing Earth’s tilt and climate.</p>
-      <p>It influences ocean tides with its gravitational pull.</p>
-      <p>The surface is covered with craters, mountains, and plains called maria.</p>
-      <p>The Moon has no atmosphere, which makes temperatures extreme.</p>
-      <p>Humans first landed on the Moon in 1969 during the Apollo 11 mission.</p>
-      <p>It has a synchronous rotation, always showing the same face to Earth.</p>
-      <p>The Moon goes through phases as it orbits Earth every 29.5 days.</p>
-      <p>Future missions plan to establish lunar bases for research.</p>
+      <h2>About the Moon</h2>
+      <p>The Moon is Earth's only natural satellite, orbiting at an average distance of 384,400 km.</p>
+      <p>It influences ocean tides due to its gravitational pull.</p>
+      <p>The Moon is about one-fourth the size of Earth.</p>
+      <p>It has no atmosphere, which makes its surface vulnerable to meteoroid impacts.</p>
+      <p>The first human landing on the Moon was Apollo 11 in 1969.</p>
+      <p>Its surface is covered with craters, mountains, and plains called maria.</p>
+      <p>The Moon completes one orbit around Earth in about 27.3 days.</p>
+      <p>It shows phases because of the changing angles of sunlight.</p>
+      <p>Lunar eclipses occur when Earth blocks sunlight from reaching the Moon.</p>
+      <p>The Moon is slowly drifting away from Earth by about 3.8 cm per year.</p>
+      <p>It has been a source of inspiration for myths, poems, and art across cultures.</p>
+      <p>Future missions aim to establish human bases on the Moon.</p>
     </div>
   </div>
 
-  <script src="script.js"></script>
+  <script>
+    const moonImg = document.getElementById("moonImage");
+    const firstSrc = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCKTHY2HLDVJBDFFF3Y3M2RFEPEM?version=1.1&fileHash=f2c6f3fc13f47bf7184be329c4c9942a&fileName=12d41a4d-0d72-43dc-870d-1ea8d07eadf0.png";
+    const secondSrc = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp";
+
+    moonImg.addEventListener("click", () => {
+      moonImg.src = moonImg.src.includes("MCKTHY2HLDVJBDFFF3Y3M2RFEPEM") ? secondSrc : firstSrc;
+    });
+  </script>
 </body>
 </html>
