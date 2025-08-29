@@ -2,30 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Moon Image Swap</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moon Swap</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="container">
-    <!-- Hidden checkbox to handle click -->
-    <input type="checkbox" id="toggle">
-
-    <label for="toggle" class="image-box">
-      <img src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCKTHY2HLDVJBDFFF3Y3M2RFEPEM?version=1.1&fileHash=f2c6f3fc13f47bf7184be329c4c9942a&fileName=12d41a4d-0d72-43dc-870d-1ea8d07eadf0.png" 
-           alt="Moon Image 1" class="first">
-      <img src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp" 
-           alt="Moon Image 2" class="second">
-    </label>
-
-    <div class="content">
-      <h2>Exploring the Moon</h2>
-      <p>
-        The Moon has always fascinated humans with its brightness and presence in the night sky. 
-        It influences tides, calendars, and even cultural stories. 
-        Scientists continue to study its craters, surface, and the possibility of human settlements. 
-        The two images represent different perspectives of the Moon, capturing its beauty and mystery.
-      </p>
-    </div>
+  <div class="image-container">
+    <img id="moonImage"
+      src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCKTHY2HLDVJBDFFF3Y3M2RFEPEM?version=1.1&fileHash=f2c6f3fc13f47bf7184be329c4c9942a&fileName=12d41a4d-0d72-43dc-870d-1ea8d07eadf0.png"
+      data-alt="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp"
+      alt="Moon" />
   </div>
+
+  <script>
+    const moonImage = document.getElementById("moonImage");
+
+    moonImage.addEventListener("click", function () {
+      let currentSrc = moonImage.getAttribute("src");
+      let altSrc = moonImage.getAttribute("data-alt");
+
+      // swap values
+      moonImage.setAttribute("src", altSrc);
+      moonImage.setAttribute("data-alt", currentSrc);
+    });
+  </script>
 </body>
 </html>
