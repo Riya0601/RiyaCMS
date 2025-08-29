@@ -2,56 +2,50 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Moon Content</title>
+  <title>Image Swap Example</title>
   <style>
-    .moon-container {
-      display: flex;
-      align-items: center;
-      justify-content: flex-start;
-      margin: 20px;
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background: #f5f5f5;
+      padding: 20px;
     }
-
-    .moon-container img {
-      width: 300px;
+    img {
+      width: 400px;
       height: auto;
       border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.2);
       cursor: pointer;
       transition: transform 0.3s ease;
     }
-
-    .moon-container img:hover {
+    img:hover {
       transform: scale(1.05);
     }
-
-    .moon-text {
-      margin-left: 20px;
-      max-width: 500px;
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      font-size: 16px;
+    p {
+      font-size: 18px;
+      color: #333;
+      margin-top: 12px;
     }
   </style>
 </head>
 <body>
-  <div class="moon-container">
-    <img id="moonImage"
-         src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp"
-         alt="Moon"
-         onclick="this.src = this.src.includes('moon-5226915_1280.webp') 
-                          ? 'https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg' 
-                          : 'https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp'">
-    <div class="moon-text">
-      <h2>The Beautiful Moon</h2>
-      <p>
-        The Moon is Earth's only natural satellite and has inspired humanity
-        for centuries. It controls the tides, guides travelers at night, and
-        has been a symbol in cultures across the world. Its surface is marked
-        with craters, mountains, and plains of solidified lava. The Moon’s
-        cycle of phases is essential for calendars and traditions. Scientists
-        continue to study the Moon to understand Earth’s history and the
-        possibilities of space exploration.
-      </p>
-    </div>
-  </div>
+
+  <h2>Click the Moon to Swap Image 🌙</h2>
+  <img id="swapImage"
+       src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp"
+       alt="Moon Image">
+
+  <p>Click on the image above to see the change.</p>
+
+  <script>
+    const img = document.getElementById("swapImage");
+    const img1 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp";
+    const img2 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg";
+
+    img.addEventListener("click", () => {
+      img.src = (img.src === img1) ? img2 : img1;
+    });
+  </script>
+
 </body>
 </html>
