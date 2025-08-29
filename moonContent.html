@@ -1,20 +1,21 @@
-<div class="image-wrapper">
-  <!-- Clickable section -->
-  <label class="image-section">
-    <!-- Hidden checkbox toggle -->
-    <input type="checkbox" class="toggle-input" aria-label="Toggle image">
-
-    <div class="image-content">
-      <h2 class="image-title">🌕 Moon Image Toggle</h2>
-      <p class="image-sub">Click anywhere to swap image</p>
-
-      <!-- Two stacked images -->
-      <div class="image-box">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" 
-             alt="Moon - Dark" class="moon-img moon-dark">
-        <img src="https://upload.wikimedia.org/wikipedia/commons/3/3c/FullMoon2010_faded.jpg" 
-             alt="Moon - Light" class="moon-img moon-light">
-      </div>
-    </div>
-  </label>
+<div style="text-align:center; padding:30px; background:#0d1b2a; border-radius:16px; color:white;">
+  <h2>🌕 Moon Image Toggle</h2>
+  <p>Click the image below to swap</p>
+  
+  <img id="moonSwap" 
+       src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp"
+       alt="Moon" 
+       style="width:300px; height:auto; border-radius:12px; cursor:pointer; box-shadow:0 4px 12px rgba(0,0,0,.3); transition:opacity .4s;">
 </div>
+
+<script>
+  const img = document.getElementById("moonSwap");
+  const img1 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp";
+  const img2 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg";
+  let toggle = true;
+
+  img.addEventListener("click", () => {
+    img.src = toggle ? img2 : img1;
+    toggle = !toggle;
+  });
+</script>
