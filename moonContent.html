@@ -3,28 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Moon Swap</title>
+  <title>Moon Info</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="image-container">
-    <img id="moonImage"
-      src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCKTHY2HLDVJBDFFF3Y3M2RFEPEM?version=1.1&fileHash=f2c6f3fc13f47bf7184be329c4c9942a&fileName=12d41a4d-0d72-43dc-870d-1ea8d07eadf0.png"
-      data-alt="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp"
-      alt="Moon" />
+  <div class="container">
+    <div class="image-box">
+      <img 
+        id="moonImage"
+        src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp" 
+        alt="Moon">
+    </div>
+    <div class="content-box">
+      <h2>The Beautiful Moon</h2>
+      <p>The Moon is Earth’s only natural satellite and the fifth largest in the solar system.</p>
+      <p>It is about 1/4th the size of Earth and has a diameter of 3,474 km.</p>
+      <p>The Moon plays a crucial role in stabilizing Earth’s tilt and climate.</p>
+      <p>It influences ocean tides with its gravitational pull.</p>
+      <p>The surface is covered with craters, mountains, and plains called maria.</p>
+      <p>The Moon has no atmosphere, which makes temperatures extreme.</p>
+      <p>Humans first landed on the Moon in 1969 during the Apollo 11 mission.</p>
+      <p>It has a synchronous rotation, always showing the same face to Earth.</p>
+      <p>The Moon goes through phases as it orbits Earth every 29.5 days.</p>
+      <p>Future missions plan to establish lunar bases for research.</p>
+    </div>
   </div>
 
-  <script>
-    const moonImage = document.getElementById("moonImage");
-
-    moonImage.addEventListener("click", function () {
-      let currentSrc = moonImage.getAttribute("src");
-      let altSrc = moonImage.getAttribute("data-alt");
-
-      // swap values
-      moonImage.setAttribute("src", altSrc);
-      moonImage.setAttribute("data-alt", currentSrc);
-    });
-  </script>
+  <script src="script.js"></script>
 </body>
 </html>
