@@ -1,24 +1,42 @@
 .moon-section {
   display: flex;
-  align-items: center;
-  justify-content: flex-start;
   gap: 20px;
-  margin: 20px 0;
+  align-items: center;
+  position: relative;
 }
 
-.moon-section img {
+.moon-wrapper {
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.moon-wrapper input[type="checkbox"] {
+  display: none;
+}
+
+.moon1, .moon2 {
   max-width: 300px;
   border-radius: 10px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.5s ease;
 }
 
-.moon-section img:hover {
-  transform: scale(1.05);
+.moon2 {
+  opacity: 0;
+}
+
+.moon-wrapper input[type="checkbox"]:checked ~ .moon2 {
+  opacity: 1;
+}
+
+.moon-wrapper input[type="checkbox"]:checked ~ .moon1 {
+  opacity: 0;
 }
 
 .moon-text {
-  max-width: 600px;
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
+  max-width: 400px;
+  text-align: left;
 }
