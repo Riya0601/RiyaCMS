@@ -1,11 +1,11 @@
 <template>
     <div class="moon-container">
-        <!-- Moon Image -->
+        <!-- Clickable Image -->
         <div class="moon-image">
-            <img src="/resource/MoonImage" alt="Moon" />
+            <img src={currentImage} alt="Moon" onclick={toggleImage} />
         </div>
 
-        <!-- Content on the right -->
+        <!-- Text Content -->
         <div class="moon-text">
             <p>Welcome to your lunar adventure! 🌙</p>
             <p>Experience the moon like never before.</p>
