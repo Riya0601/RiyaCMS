@@ -3,23 +3,39 @@
 <head>
   <meta charset="UTF-8">
   <title>Moon Swap</title>
-  <link rel="stylesheet" href="moon.css">
+  <!-- Link your raw GitHub CSS -->
+  <link rel="stylesheet" href="https://raw.githubusercontent.com/Riya0601/RiyaCMS/refs/heads/main/moonstyle.css">
 </head>
 <body>
-  <div class="moon-section">
-    <label class="moon-wrapper">
-      <input type="checkbox">
-      <img class="moon1" src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp" alt="Moon Image 1" />
-      <img class="moon2" src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg" alt="Moon Image 2" />
-    </label>
+  <div class="moon-container">
+    <img id="moonImage" 
+         src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp" 
+         alt="Moon" 
+         class="moon-image"
+         onclick="swapImage()">
 
-    <div class="moon-text">
-      <h2>The Beauty of the Moon</h2>
-      <p>The moon has fascinated humans for centuries with its ever-changing phases.</p>
-      <p>It influences tides, inspires art, and sparks scientific curiosity.</p>
-      <p>From ancient myths to modern space missions, the moon has always been our companion in the night sky.</p>
-      <p>Click the image to reveal another perspective of this celestial beauty!</p>
+    <div class="moon-content">
+      <h2>The Moon</h2>
+      <p>The Moon is Earth’s only natural satellite and has a profound impact on our planet.</p>
+      <p>It influences tides, stabilizes Earth’s rotation, and has inspired humans for centuries.</p>
+      <p>The Moon’s surface is marked with craters, mountains, and vast plains of volcanic rock.</p>
+      <p>It takes about 27.3 days to orbit Earth and the same time to rotate once on its axis.</p>
+      <p>This synchronous rotation is why we always see the same face of the Moon from Earth.</p>
+      <p>Scientists believe the Moon formed about 4.5 billion years ago after a giant impact.</p>
+      <p>It has no atmosphere, weather, or liquid water, but ice exists in shadowed craters.</p>
+      <p>The Moon has been visited by astronauts during NASA’s Apollo missions between 1969 and 1972.</p>
+      <p>Future missions aim to establish a sustainable human presence on the Moon.</p>
+      <p>It continues to fascinate astronomers, explorers, and dreamers across the world.</p>
     </div>
   </div>
+
+  <script>
+    function swapImage() {
+      let img = document.getElementById("moonImage");
+      let img1 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp";
+      let img2 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg";
+      img.src = (img.src === img1) ? img2 : img1;
+    }
+  </script>
 </body>
 </html>
