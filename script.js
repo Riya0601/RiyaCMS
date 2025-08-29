@@ -1,7 +1,11 @@
 document.addEventListener("DOMContentLoaded", function () {
   const moonImage = document.getElementById("moonImage");
 
-  // Alternate images
+  if (!moonImage) {
+    console.error("Moon image not found in DOM");
+    return;
+  }
+
   const images = [
     "https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg",
     "https://upload.wikimedia.org/wikipedia/commons/9/99/Moon_in_black_sky.jpg"
