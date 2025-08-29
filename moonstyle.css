@@ -1,42 +1,25 @@
-.moon-section {
+.moon-container {
   display: flex;
+  align-items: flex-start;
   gap: 20px;
-  align-items: center;
-  position: relative;
+  margin: 20px;
 }
 
-.moon-wrapper {
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.moon-wrapper input[type="checkbox"] {
-  display: none;
-}
-
-.moon1, .moon2 {
+.moon-image {
   max-width: 300px;
-  border-radius: 10px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  transition: opacity 0.5s ease;
+  height: auto;
+  cursor: pointer;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
 }
 
-.moon2 {
-  opacity: 0;
+.moon-content {
+  flex: 1;
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
 }
 
-.moon-wrapper input[type="checkbox"]:checked ~ .moon2 {
-  opacity: 1;
-}
-
-.moon-wrapper input[type="checkbox"]:checked ~ .moon1 {
-  opacity: 0;
-}
-
-.moon-text {
-  max-width: 400px;
-  text-align: left;
+.moon-content h2 {
+  margin-top: 0;
+  color: #444;
 }
