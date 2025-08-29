@@ -2,40 +2,67 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Moon Swap</title>
-  <!-- Link your raw GitHub CSS -->
-  <link rel="stylesheet" href="https://raw.githubusercontent.com/Riya0601/RiyaCMS/refs/heads/main/moonstyle.css">
+  <title>Moon Content</title>
+  <style>
+    .moon-container {
+      display: flex;
+      align-items: center;
+      justify-content: flex-start;
+      margin: 20px;
+    }
+
+    .moon-container img {
+      width: 300px;
+      height: auto;
+      border-radius: 12px;
+      cursor: pointer;
+      transition: transform 0.3s ease;
+    }
+
+    .moon-container img:hover {
+      transform: scale(1.05);
+    }
+
+    .moon-text {
+      margin-left: 20px;
+      max-width: 500px;
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      font-size: 16px;
+    }
+  </style>
 </head>
 <body>
   <div class="moon-container">
-    <img id="moonImage" 
-         src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp" 
-         alt="Moon" 
-         class="moon-image"
-         onclick="swapImage()">
-
-    <div class="moon-content">
-      <h2>The Moon</h2>
-      <p>The Moon is Earth’s only natural satellite and has a profound impact on our planet.</p>
-      <p>It influences tides, stabilizes Earth’s rotation, and has inspired humans for centuries.</p>
-      <p>The Moon’s surface is marked with craters, mountains, and vast plains of volcanic rock.</p>
-      <p>It takes about 27.3 days to orbit Earth and the same time to rotate once on its axis.</p>
-      <p>This synchronous rotation is why we always see the same face of the Moon from Earth.</p>
-      <p>Scientists believe the Moon formed about 4.5 billion years ago after a giant impact.</p>
-      <p>It has no atmosphere, weather, or liquid water, but ice exists in shadowed craters.</p>
-      <p>The Moon has been visited by astronauts during NASA’s Apollo missions between 1969 and 1972.</p>
-      <p>Future missions aim to establish a sustainable human presence on the Moon.</p>
-      <p>It continues to fascinate astronomers, explorers, and dreamers across the world.</p>
+    <img id="moonImage"
+         src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp"
+         alt="Moon">
+    <div class="moon-text">
+      <h2>The Beautiful Moon</h2>
+      <p>
+        The Moon is Earth's only natural satellite and has inspired humanity
+        for centuries. It controls the tides, guides travelers at night, and
+        has been a symbol in cultures across the world. Its surface is marked
+        with craters, mountains, and plains of solidified lava. The Moon’s
+        cycle of phases is essential for calendars and traditions. Scientists
+        continue to study the Moon to understand Earth’s history and the
+        possibilities of space exploration.
+      </p>
     </div>
   </div>
 
   <script>
-    function swapImage() {
-      let img = document.getElementById("moonImage");
-      let img1 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp";
-      let img2 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg";
-      img.src = (img.src === img1) ? img2 : img1;
-    }
+    const moonImage = document.getElementById("moonImage");
+
+    const img1 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp";
+    const img2 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg";
+
+    let toggle = false;
+
+    moonImage.addEventListener("click", () => {
+      moonImage.src = toggle ? img1 : img2;
+      toggle = !toggle;
+    });
   </script>
 </body>
 </html>
