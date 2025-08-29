@@ -31,6 +31,8 @@
 <body>
 
   <h2>Click the Moon to Swap Image 🌙</h2>
+  
+  <!-- Start with first image -->
   <img id="swapImage"
        src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp"
        alt="Moon Image">
@@ -39,15 +41,16 @@
 
   <script>
     const img = document.getElementById("swapImage");
-    const img1 = "moon-5226915_1280.webp";
-    const img2 = "1664495239317.jpeg";
+
+    // Both images from your org CMS
+    const image1 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp";
+    const image2 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg";
+
+    let toggle = true; // Track which image is shown
 
     img.addEventListener("click", () => {
-      if (img.src.includes(img1)) {
-        img.src = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg";
-      } else {
-        img.src = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp";
-      }
+      img.src = toggle ? image2 : image1;
+      toggle = !toggle;
     });
   </script>
 
