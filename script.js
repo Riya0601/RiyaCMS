@@ -1,19 +1,8 @@
-document.addEventListener("DOMContentLoaded", function () {
-  const moonImage = document.getElementById("moonImage");
-
-  if (!moonImage) {
-    console.error("Moon image not found in DOM");
-    return;
+<script>
+  function changeImage() {
+    var img = document.getElementById('swapImage');
+    var image1 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp";
+    var image2 = "https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg";
+    img.src = (img.src.indexOf(image1) !== -1) ? image2 : image1;
   }
-
-  const images = [
-    "https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg",
-    "https://upload.wikimedia.org/wikipedia/commons/9/99/Moon_in_black_sky.jpg"
-  ];
-  let index = 0;
-
-  moonImage.addEventListener("click", function () {
-    index = (index + 1) % images.length;
-    moonImage.src = images[index];
-  });
-});
+</script>
