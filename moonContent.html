@@ -1,26 +1,38 @@
-<template>
-    <div class="moon-container">
-        <!-- Clickable Image -->
-        <div class="moon-image">
-            <img src={currentImage} alt="Moon" onclick={toggleImage} />
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moon Content</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
 
-        <!-- Text Content -->
-        <div class="moon-text">
-            <p>Welcome to your lunar adventure! 🌙</p>
-            <p>Experience the moon like never before.</p>
-            <p>Choose your travel options carefully: Orbit, Surface, or Moon Base.</p>
-            <p>Learn about lunar geology during your journey.</p>
-            <p>Witness Earth from a breathtaking perspective.</p>
-            <p>Enjoy exclusive moon-based activities.</p>
-            <p>Safety and training instructions will be provided.</p>
-            <p>Take memorable photos on the lunar surface.</p>
-            <p>Travel in small groups for comfort and safety.</p>
-            <p>Cash on delivery payment at the rocket boarding.</p>
-            <p>Pre-flight briefing is mandatory for all travelers.</p>
-            <p>Moon souvenirs included with your ticket.</p>
-            <p>Our expert guides ensure a smooth journey.</p>
-            <p>Return safely to Earth with unforgettable memories.</p>
-        </div>
+  <div class="moon-container">
+    <!-- Clickable Image -->
+    <div class="moon-image">
+      <img id="moonImg" src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" 
+           alt="Moon" onclick="toggleImage()" />
     </div>
-</template>
+
+    <!-- Text Content -->
+    <div class="moon-text">
+      <p>Welcome to your lunar adventure! 🌙</p>
+      <p>Experience the moon like never before.</p>
+      <p>Choose your travel options carefully: Orbit, Surface, or Moon Base.</p>
+      <p>Learn about lunar geology during your journey.</p>
+      <p>Witness Earth from a breathtaking perspective.</p>
+      <p>Enjoy exclusive moon-based activities.</p>
+      <p>Safety and training instructions will be provided.</p>
+      <p>Take memorable photos on the lunar surface.</p>
+      <p>Travel in small groups for comfort and safety.</p>
+      <p>Cash on delivery payment at the rocket boarding.</p>
+      <p>Pre-flight briefing is mandatory for all travelers.</p>
+      <p>Moon souvenirs included with your ticket.</p>
+      <p>Our expert guides ensure a smooth journey.</p>
+      <p>Return safely to Earth with unforgettable memories.</p>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
