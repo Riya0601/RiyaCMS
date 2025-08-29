@@ -1,13 +1,15 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const img = document.getElementById("moonImage");
-  let toggle = false;
+  const moonImage = document.getElementById("moonImage");
 
-  img.addEventListener("click", function () {
-    if (toggle) {
-      img.src = "https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg";
-    } else {
-      img.src = "https://upload.wikimedia.org/wikipedia/commons/9/99/Moon_in_true_color.jpg";
-    }
-    toggle = !toggle;
+  // Alternate images
+  const images = [
+    "https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg",
+    "https://upload.wikimedia.org/wikipedia/commons/9/99/Moon_in_black_sky.jpg"
+  ];
+  let index = 0;
+
+  moonImage.addEventListener("click", function () {
+    index = (index + 1) % images.length;
+    moonImage.src = images[index];
   });
 });
