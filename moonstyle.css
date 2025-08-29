@@ -1,37 +1,47 @@
-.cms-moon-container {
+.container {
   display: flex;
+  align-items: center;
+  justify-content: flex-start;
   gap: 20px;
-  margin: 20px;
-  align-items: flex-start;
-  font-family: Arial, sans-serif;
 }
 
-.cms-moon-image-wrapper {
-  cursor: pointer;
-  display: block;
+.image-box {
   position: relative;
+  width: 300px;   /* size control */
+  height: 300px;
+  cursor: pointer;
 }
 
-.moon {
-  width: 250px;   /* control moon size */
-  border-radius: 12px;
-  transition: opacity 0.3s ease;
-  display: block;
+.image-box img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: opacity 0.6s ease;
 }
 
-.alternate {
-  display: none;
+.image-box img.second {
+  opacity: 0;
 }
 
-#toggle:checked + .cms-moon-image-wrapper .moon {
-  display: none;
+/* Checkbox toggle effect */
+#toggle:checked ~ .image-box img.first {
+  opacity: 0;
+}
+#toggle:checked ~ .image-box img.second {
+  opacity: 1;
 }
 
-#toggle:checked + .cms-moon-image-wrapper .alternate {
-  display: block;
-}
-
-.cms-moon-content {
+.content {
   max-width: 500px;
   text-align: left;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+}
+
+/* Hide the checkbox itself */
+#toggle {
+  display: none;
 }
