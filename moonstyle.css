@@ -1,25 +1,41 @@
-.moon-container {
+/* Container setup */
+.container {
   display: flex;
-  align-items: flex-start;
-  gap: 20px;
-  margin: 20px;
-  font-family: Arial, sans-serif;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;          /* space between image and text */
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
 }
 
-.moon-image img {
-  width: 250px;
-  height: auto;
-  border-radius: 8px;
-  cursor: pointer;
-  transition: transform 0.3s ease;
+/* Moon image */
+#moonImage {
+  width: 250px;       /* control image size */
+  height: auto;       /* keep proportions */
+  border-radius: 12px;
+  cursor: pointer;    /* show pointer on hover */
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease-in-out;
 }
 
-.moon-image img:hover {
+#moonImage:hover {
   transform: scale(1.05);
 }
 
-.moon-text {
-  max-width: 600px;
-  line-height: 1.6;
+/* Text content */
+.content {
+  flex: 1;            /* take remaining space */
   text-align: left;
+}
+
+.content h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.content p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 4px 0;
 }
