@@ -1,7 +1,36 @@
-<div class="image-swap-container">
-  <img id="swapImage"
-    src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp"
-    alt="Moon Image 1"
-    class="swap-img"
-    onclick="changeImage()" />
-</div>
+<style>
+  #imageSwapper {
+    cursor: pointer; /* Changes the mouse cursor to a hand to show it's clickable */
+    max-width: 100%; /* Makes the image responsive */
+    height: auto;
+    border-radius: 8px; /* Optional: adds rounded corners */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Optional: adds a subtle shadow */
+  }
+</style>
+
+<img id="imageSwapper" 
+     src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg" 
+     alt="Click to see the other view" 
+     onclick="swapImage()">
+
+<script>
+  // Your specific image URLs are now in the code.
+  const firstImageUrl = 'https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg';
+  const secondImageUrl = 'https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC4QYSUI44ONAPJKPHNHDQO75NUE?version=2.1&fileHash=4559337abf4574ddef88814bcd3cfa56&fileName=360_F_80974696_ZRm0ZBvzE9rlIRLGdLPhZyoUi98GjOm8.jpg';
+
+  function swapImage() {
+    // Get the image element from the page by its ID
+    let imageElement = document.getElementById('imageSwapper');
+    
+    // Check which image is currently being displayed
+    if (imageElement.src === firstImageUrl) {
+      // If it's the first image, change it to the second
+      imageElement.src = secondImageUrl;
+      imageElement.alt = "Click to go back to the first view"; // Update alt text for accessibility
+    } else {
+      // Otherwise, change it back to the first image
+      imageElement.src = firstImageUrl;
+      imageElement.alt = "Click to see the other view"; // Update alt text
+    }
+  }
+</script>
