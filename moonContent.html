@@ -1,34 +1,25 @@
-<link rel="stylesheet" href="YOUR_CSS_DELIVERY_URL" />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Moon Swap</title>
+  <link rel="stylesheet" href="moon.css">
+</head>
+<body>
+  <div class="moon-section">
+    <label class="moon-wrapper">
+      <input type="checkbox">
+      <img class="moon1" src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp" alt="Moon Image 1" />
+      <img class="moon2" src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg" alt="Moon Image 2" />
+    </label>
 
-<div class="moon-section">
-  <img id="moonImage" 
-       src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp" 
-       data-alt="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MC6VXN5YSCRNFWXNLCXPOBMLJLDY?version=2.1&fileHash=c22ce8c6e1aa3a9743977996db33d686&fileName=1664495239317.jpeg" 
-       alt="Moon" />
-
-  <div class="moon-text">
-    <h2>The Beauty of the Moon</h2>
-    <p>
-      The moon has fascinated humans for centuries. Its gentle glow has guided
-      travelers at night and inspired poets and dreamers alike.
-    </p>
-    <p>
-      From the ancient myths to modern science, the moon continues to play an
-      important role in our lives.
-    </p>
-    <p>
-      Click the moon image to reveal another perspective!
-    </p>
+    <div class="moon-text">
+      <h2>The Beauty of the Moon</h2>
+      <p>The moon has fascinated humans for centuries with its ever-changing phases.</p>
+      <p>It influences tides, inspires art, and sparks scientific curiosity.</p>
+      <p>From ancient myths to modern space missions, the moon has always been our companion in the night sky.</p>
+      <p>Click the image to reveal another perspective of this celestial beauty!</p>
+    </div>
   </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", function () {
-    const img = document.getElementById("moonImage");
-    img.addEventListener("click", function () {
-      const current = img.src;
-      img.src = img.dataset.alt;
-      img.dataset.alt = current; // swap back
-    });
-  });
-</script>
+</body>
+</html>
