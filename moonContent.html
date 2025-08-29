@@ -2,38 +2,28 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Moon CMS Example</title>
+  <title>Moon Image Swap</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="cms-moon-container">
-    <!-- hidden checkbox to control toggle -->
-    <input type="checkbox" id="toggle" hidden>
-    
-    <!-- clicking on images triggers checkbox -->
-    <label for="toggle" class="cms-moon-image-wrapper">
-      <img class="moon" 
-           src="https://upload.wikimedia.org/wikipedia/commons/e/e1/FullMoon2010.jpg" 
-           alt="Moon">
-      <img class="moon alternate" 
-           src="https://upload.wikimedia.org/wikipedia/commons/9/99/Moon_in_black_sky.jpg" 
-           alt="Moon alternate">
+  <div class="container">
+    <!-- Hidden checkbox to handle click -->
+    <input type="checkbox" id="toggle">
+
+    <label for="toggle" class="image-box">
+      <img src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCKTHY2HLDVJBDFFF3Y3M2RFEPEM?version=1.1&fileHash=f2c6f3fc13f47bf7184be329c4c9942a&fileName=12d41a4d-0d72-43dc-870d-1ea8d07eadf0.png" 
+           alt="Moon Image 1" class="first">
+      <img src="https://orgfarm-f661242b40-dev-ed.develop.my.site.com/cms/delivery/media/MCQGEQZJOCWRBALODWIFS5F6OLHI?version=2.1&fileHash=454d613d5e2e635c14ac4e747137303a&fileName=moon-5226915_1280.webp" 
+           alt="Moon Image 2" class="second">
     </label>
 
-    <!-- right side text -->
-    <div class="cms-moon-content">
-      <h2>The Moon</h2>
+    <div class="content">
+      <h2>Exploring the Moon</h2>
       <p>
-        The Moon is Earth's only natural satellite and is the fifth largest moon in the Solar System.  
-        Its gravitational pull affects tides on Earth.  
-        The Moon’s surface is covered with craters, mountains, and ancient lava plains.  
-        It has no atmosphere, no water, and no weather like Earth.  
-        Humans first visited the Moon in 1969 with Apollo 11.  
-        The Moon always shows the same face to Earth.  
-        Its phases are caused by the changing positions of the Earth, Moon, and Sun.  
-        A lunar day lasts about 29.5 Earth days.  
-        Scientists are planning new missions to explore it again.  
-        The Moon inspires art, culture, and science all around the world.
+        The Moon has always fascinated humans with its brightness and presence in the night sky. 
+        It influences tides, calendars, and even cultural stories. 
+        Scientists continue to study its craters, surface, and the possibility of human settlements. 
+        The two images represent different perspectives of the Moon, capturing its beauty and mystery.
       </p>
     </div>
   </div>
